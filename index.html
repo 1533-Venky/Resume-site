@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Venkata Sai Gunisetty — Resume</title>
+  <meta name="description" content="Resume of Venkata Sai Gunisetty — MS Information Technology & Management" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & base */
+    :root{
+      --bg:#0b1220; --card:#0f1724; --muted:#9aa4b2; --accent:#60a5fa;
+      --text:#e6eef8; --maxw:980px; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:linear-gradient(180deg,#071025 0%, #081425 60%); color:var(--text); -webkit-font-smoothing:antialiased;}
+    a{color:var(--accent); text-decoration:none}
+    a:focus,a:hover{text-decoration:underline; outline:none}
+    .wrap{width:min(94%,var(--maxw)); margin:28px auto 60px}
+
+    /* Header */
+    .header {
+      display:flex; gap:18px; align-items:center; padding:18px; border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .avatar {
+      width:104px; height:104px; border-radius:999px; object-fit:cover; flex:0 0 104px; border:2px solid rgba(255,255,255,0.04);
+      background:linear-gradient(180deg,#0e1b2a,#0b1420);
+    }
+    .identity { flex:1; }
+    .name { margin:0; font-size:1.6rem; font-weight:700; letter-spacing:0.2px; }
+    .sub { margin:6px 0 10px; color:var(--muted); font-size:0.94rem; }
+    .contacts { display:flex; gap:10px; flex-wrap:wrap; font-size:0.92rem; color:var(--muted); }
+
+    .chip { display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.02) }
+
+    /* Layout */
+    .grid { display:grid; gap:14px; margin-top:18px; grid-template-columns: 1fr; }
+    .card { background:var(--card); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); box-shadow: 0 4px 18px rgba(2,6,23,0.6); }
+    h2 { margin:0 0 10px; font-size:1.05rem; font-weight:600; }
+    h3 { margin:0 0 6px; font-size:0.98rem; font-weight:600; color:var(--text); }
+    p, li { color:var(--text); line-height:1.45; margin:0 0 8px; font-size:0.95rem; }
+
+    /* Skills list */
+    .skills { display:flex; gap:8px; flex-wrap:wrap; list-style:none; padding:0; margin:0; }
+    .skills li { background:rgba(255,255,255,0.02); padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,0.02); color:var(--text); font-weight:500; }
+
+    /* Two-column on wide screens */
+    @media(min-width:880px){
+      .grid { grid-template-columns: 1fr 360px; align-items:start; }
+      .summary { grid-column:1 / -1; }
+      .right-col { display:flex; flex-direction:column; gap:14px; }
+      .card.compact { padding:12px; }
+    }
+
+    /* Experience / projects */
+    .meta { color:var(--muted); font-size:0.86rem; margin-bottom:8px; }
+    .bullet { margin-left:14px; margin-bottom:8px; }
+    ul.bullets { padding-left:18px; margin:8px 0 0; }
+
+    /* Footer */
+    footer{ margin-top:18px; text-align:center; color:var(--muted); font-size:0.86rem; }
+
+    /* Accessibility focus */
+    a:focus { outline:3px solid rgba(96,165,250,0.18); outline-offset:2px; border-radius:6px; }
+
+  </style>
+
+  <!-- JSON-LD structured data (schema.org) so fields are typed for parsers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Venkata Sai Gunisetty",
+    "jobTitle": "Master of Science — Information Technology & Management (student)",
+    "telephone": "+1-773-406-6808",
+    "email": "venkatasaigunisetty1515@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "addressCountry": "US"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Illinois Institute of Technology"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "SRM Institute of Science and Technology"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/venkata-sai-gunisetty/",
+      "https://github.com/1533-Venky"
+    ],
+    "skills": [
+      "MS Excel",
+      "Power BI",
+      "SQL",
+      "MySQL",
+      "Tableau",
+      "Power Query",
+      "Power Pivot",
+      "Python",
+      "R"
+    ],
+    "knowsAbout": ["BI", "Dashboards", "Data Analysis", "Stakeholder Communication", "AGILE"]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap" itemscope itemtype="https://schema.org/Person" aria-label="Resume of Venkata Sai Gunisetty">
+    <header class="header" aria-label="Resume header">
+      <!-- Replace the src with your actual photo or remove the <img> tag if you don't want an image -->
+      <img src="headshot.jpg" alt="Headshot of Venkata Sai Gunisetty" class="avatar" onerror="this.style.display='none'">
+      <div class="identity">
+        <h1 class="name" itemprop="name">Venkata Sai Gunisetty</h1>
+        <div class="sub" itemprop="jobTitle">Master of Science — Information Technology &amp; Management</div>
+
+        <div class="contacts" aria-hidden="false">
+          <!-- location as structured PostalAddress-like display -->
+          <div class="chip" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Chicago</span>, <span itemprop="addressRegion">IL</span>
+          </div>
+
+          <!-- phone and email are already proper types via tel/mailto -->
+          <a class="chip" href="tel:+17734066808" itemprop="telephone">+1 (773) 406-6808</a>
+          <a class="chip" href="mailto:venkatasaigunisetty1515@gmail.com" itemprop="email">venkatasaigunisetty1515@gmail.com</a>
+
+          <!-- external profiles (sameAs in JSON-LD too) -->
+          <a class="chip" href="https://www.linkedin.com/in/venkata-sai-gunisetty/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="chip" href="https://github.com/1533-Venky" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <!-- SUMMARY (full width on wide screens) -->
+      <section class="card summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Summary</h2>
+        <p itemprop="description">
+          A determined and passionate master's student in Information Technology and Management
+          (<span data-cgpa="3.33" aria-label="CGPA">CGPA 3.33</span>), eager to develop, manage, and implement solutions
+          to address organizational challenges. Collaborative team player with strong technical skills in BI and data tools,
+          and experience delivering dashboards and data-driven insights to stakeholders.
+        </p>
+      </section>
+
+      <!-- Left column: Education, Experience, Projects -->
+      <div>
+        <section class="card" aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+
+          <article itemscope itemtype="https://schema.org/EducationalOrganization" aria-label="IIT Education">
+            <h3 itemprop="name">Illinois Institute of Technology — Master of Science (in progress)</h3>
+            <div class="meta">
+              <span itemprop="department">Information Technology &amp; Management</span> —
+              <span class="numeric" data-cgpa="3.33">CGPA 3.33</span> • <span itemprop="location">Chicago, IL</span>
+            </div>
+          </article>
+
+          <article style="margin-top:12px;" itemscope itemtype="https://schema.org/EducationalOrganization" aria-label="SRM Education">
+            <h3 itemprop="name">SRM Institute of Science and Technology — Bachelor of Technology</h3>
+            <div class="meta">
+              <span itemprop="department">Electronics and Computer Engineering</span> —
+              <span class="numeric" data-cgpa="8.39">CGPA 8.39</span> •
+              <span itemprop="location">Chennai, India</span> —
+              <time datetime="2023-05" itemprop="endDate">May 2023</time>
+            </div>
+          </article>
+        </section>
+
+        <section class="card" aria-labelledby="experience-title" style="margin-top:12px;">
+          <h2 id="experience-title">Work Experience</h2>
+
+          <article itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
+            <h3 itemprop="roleName">Business Analyst Intern — Ai Variant</h3>
+            <div class="meta">
+              <span itemprop="jobLocation">Hyderabad, India</span> •
+              <time datetime="2024-01" itemprop="startDate">January 2024</time> –
+              <time datetime="2024-07" itemprop="endDate">July 2024</time>
+            </div>
+            <ul class="bullets">
+              <li>Conducted data collection and cleaning to ensure accuracy; collaborated on exploratory data analysis using <span itemprop="skills">MySQL</span>.</li>
+              <li>Built interactive dashboards in Power BI and Tableau; applied advanced Excel workflows and Power Query for ETL.</li>
+              <li>Completed certifications in R and Python; contributed to data-driven solutions to optimize business processes.</li>
+              <li>Presented findings to stakeholders and worked within AGILE practices to iterate on deliverables.</li>
+              <li>Designed a KPI dashboard to monitor progress and operational performance.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="card" aria-labelledby="projects-title" style="margin-top:12px;">
+          <h2 id="projects-title">Project Experience</h2>
+
+          <article itemscope itemtype="https://schema.org/CreativeWork">
+            <h3 itemprop="name">HR Analytics</h3>
+            <div class="meta"><time datetime="2024-03" itemprop="datePublished">March 2024</time> – <time datetime="2024-07" itemprop="dateModified">July 2024</time></div>
+            <ul class="bullets">
+              <li>Performed HR data analysis to investigate high employee turnover and identify key attrition drivers.</li>
+              <li>Collected, cleaned, and modeled data using Power Query Editor, Power Pivot, Excel, and SQL.</li>
+              <li>Created dashboards with charts, filters, and slicers in Power BI, Tableau, and Excel for executive audiences.</li>
+              <li>Proposed and tracked data-driven interventions to reduce turnover and measured their impact over time.</li>
+            </ul>
+            <p style="margin-top:8px;"><strong>Project artifacts:</strong> Power BI / Tableau dashboards (available upon request).</p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Right column: Skills & Languages (compact cards) -->
+      <aside class="right-col" aria-label="Skills and tools">
+        <section class="card compact" aria-labelledby="skills-title">
+          <h2 id="skills-title">Skills</h2>
+          <ul class="skills" aria-hidden="false" itemprop="skills">
+            <li>MS Excel</li>
+            <li>Power BI</li>
+            <li>SQL / MySQL</li>
+            <li>Tableau</li>
+            <li>Power Query / Power Pivot</li>
+          </ul>
+        </section>
+
+        <section class="card compact" aria-labelledby="tech-title">
+          <h2 id="tech-title">Technology &amp; Tools</h2>
+          <p class="meta" style="margin:0 0 8px">Tools & platforms used</p>
+          <p style="margin:0" itemprop="knowsAbout">MS Excel, Power BI, Tableau, MySQL, Power Query, Power Pivot, Python &amp; R (certified)</p>
+        </section>
+
+        <section class="card compact" aria-labelledby="lang-title">
+          <h2 id="lang-title">Languages</h2>
+          <p style="margin:0" itemprop="knowsLanguage">English • Telugu • Tamil</p>
+        </section>
+
+        <section class="card compact" aria-labelledby="other-title">
+          <h2 id="other-title">Other</h2>
+          <p style="margin:0">Management • AGILE exposure • Stakeholder communication</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer role="contentinfo">
+      <p>© <time datetime="2025">2025</time> Venkata Sai Gunisetty — Hosted on GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>

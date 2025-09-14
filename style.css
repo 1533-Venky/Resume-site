@@ -1,0 +1,99 @@
+/* ---------------------------
+  Non-intrusive enhancements
+  (Add this AFTER your existing CSS)
+   - does not change original selectors
+   - uses slightly more specific selectors to avoid collisions
+----------------------------*/
+
+/* avatar fallback background and accessible border */
+.header-grid .avatar {
+  background-color: rgba(255,255,255,0.02);
+  /* ensure very subtle outline for low-contrast images */
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.02) inset;
+}
+
+/* stronger keyboard focus visuals but only when keyboard is used */
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible {
+  outline: 3px solid rgba(96,165,250,0.18);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* improve focus ring only for .contact links (keeps rest intact) */
+.container .contact a:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+}
+
+/* make contact buttons easier to tap on mobile without changing layout */
+.container .contact a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* small improvement for long names/titles in header — won't override your h1 rule */
+.header-grid .identity h1 {
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* keep cards visually consistent on very large screens */
+@media (min-width: 1200px) {
+  .container { width: min(92%, calc(var(--maxw) + 200px)); } /* small breathing room on huge displays */
+  .card { padding: 1.4rem 1.6rem; } /* slightly more padding on large screens */
+}
+
+/* subtle responsive tweak for avatar + grid on narrow screens */
+@media (max-width: 520px) {
+  .header-grid {
+    grid-template-columns: 72px 1fr;
+    gap: 0.75rem;
+  }
+  .avatar { width: 72px; height: 72px; border-width: 1px; }
+}
+
+/* print-friendly (doesn't alter screen styles) */
+@media print {
+  :root { color-scheme: light; }
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .card {
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+  a::after { content: " (" attr(href) ")"; color: #000; } /* show URLs on print */
+  .avatar { display: none; } /* hide photos for concise print */
+  .site-footer { display: none; } /* hide footer on print if desired */
+}
+
+/* prefers-reduced-motion: disable animations (safe default) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* utility: screen-reader only helper */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+/* subtle high-contrast alternative (opt-in class) */
+/* Use class .high-contrast on body to enable */
+body.high-contrast {
+  --card: #0b1220; /* darker card */
+  --text: #ffffff;
+  --muted: #cbd5e1;
+}
